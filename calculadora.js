@@ -54,7 +54,23 @@ operadores.forEach(operador => operador.addEventListener('click', selecionarOper
 
 const ativarIgual = () => {
     calcular();
-    operador= undefined; // impedindo que o calculo seja efetuado sempre que clickamos no igual
+    operador = undefined; // impedindo que o calculo seja efetuado sempre que clicamos no igual
+
 }
 
-document.getElementById('igual').addEventListener('click',ativarIgual);
+document.getElementById('igual').addEventListener('click', ativarIgual);
+
+const limparDisplay = () => display.textContent = '';
+
+document.getElementById('limparDisplay').addEventListener('click', limparDisplay);
+
+
+
+const limparCalculo = () => {
+    limparDisplay();
+    operador = undefined;
+    novoNumero = true;
+    numeroAnterior = undefined;
+}
+
+document.getElementById('limparCalculo').addEventListener('click', limparCalculo);
