@@ -4,7 +4,9 @@ const display = document.getElementById('display');
 const numeros = document.querySelectorAll('[id*=tecla]'); // qualquer elemento que tenha como parte do atributo o 'tecla'
 const operadores = document.querySelectorAll('[id*=operador]');
 
+
 let novoNumero = true; // variável booleana para impedir que concatene numeros depois dos operadores
+
 let operador;
 let numeroAnterior;
 
